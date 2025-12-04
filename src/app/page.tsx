@@ -2,10 +2,10 @@
 import Image from "next/image";
 import { useState } from "react";
 export default function Home() {
-  const [cardNum, setCardNum] = useState<number | string>(1);
-  const [cardType, setCardType] = useState("");
+  const [cardNum, setCardNum] = useState<number | string>("A");
+  const [cardType, setCardType] = useState<string>("♠");
   const suits = ["♠", "♥", "♦", "♣"];
-  const [suitColor, setSuitColor] = useState("black");
+  const [suitColor, setSuitColor] = useState("text-black");
 
   const generateCard = () => {
     const randomNum = Math.floor(Math.random() * 13) + 1;
